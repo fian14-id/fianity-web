@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F4F8FF;
+  --foreground: #242424;
+  --secondary: #C4D9FF;
+  --accent: #65B0B7;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+}
+/* Custom Scrollbar dengan Warna Kustom */
+
+/* Untuk browser berbasis WebKit (Chrome, Safari, Opera, Edge) */
+::-webkit-scrollbar {
+  /* Mempertahankan ukuran default */
+  width: auto;
+  height: auto;
+}
+
+::-webkit-scrollbar-track {
+  /* Track/jalur scrollbar */
+  background: #f1f1f1; /* Warna latar belakang track, bisa disesuaikan */
+}
+
+::-webkit-scrollbar-thumb {
+  /* Thumb/pegangan scrollbar */
+  background: var(--foreground); /* Warna biru yang bisa disesuaikan */
+  border-radius: 6px; /* Mempertahankan sudut melengkung default */
+  border: 3px solid #f1f1f1; /* Border yang memisahkan dari track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /* Efek hover pada thumb */
+  background: #222222; /* Warna biru yang lebih gelap saat hover */
+}
+
+/* Untuk Firefox */
+* {
+  scrollbar-color: var(--foreground) #f1f1f1; /* thumb-color track-color */
+  scrollbar-width: auto; /* Mempertahankan ukuran default */
+}
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #242424; // nonaktif
+    --foreground: #F8FBF8;
+  }
+} */
+@font-face {
+  font-family: "Freedom";
+  src: url('/fonts/Xerina.otf');
+}
+@font-face {
+  font-family: "Estetika";
+  src: url('/fonts/dilleyhelia.otf');
+}
+::selection {
+  background: var(--foreground);
+  color: var(--accent);
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-montserrat);
+}
+
+.new-font {
+  font-family: 'Freedom';
+}
+
+.estetika {
+  font-family: 'Estetika';
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--background);
+  transition: transform 0.25s ease-out;
+  -webkit-transition: transform 0.25s ease-out;
+  -moz-transition: transform 0.25s ease-out;
+  -ms-transition: transform 0.25s ease-out;
+  -o-transition: transform 0.25s ease-out;
+}
+
+.underline-animation:hover::after {
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+}
+
+.underline-animation.this-animation::after {
+  transform-origin: bottom right;
+}
+.underline-animation.this-animation:hover::after {
+  transform-origin: bottom left;
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+}
+
+.bar {
+  width: 10vw;
+  height: 105vh;
+  background: var(--foreground);
+}
+
+.counter {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 999;
+  color: var(--background);
+  padding: 0.2em 0.4em;
+  font-size: 20vw;
+  font-family: 'Freedom', sans-serif;
+}
+
+.menu-overlay {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+
+.menu-link-item {
+  width: max-content;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.menu-link-item-holder {
+  position: relative;
+}
+
+.Ripple-button {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.Ripple-button::before {
+  content: '';
+  z-index: -1;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--foreground);
+  left: 0;
+  bottom: 0;
+  transition: transform 0.25s ease-in;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  -webkit-transition: transform 0.25s ease-in;
+  -moz-transition: transform 0.25s ease-in;
+  -ms-transition: transform 0.25s ease-in;
+  -o-transition: transform 0.25s ease-in;
+}
+.Ripple-button:hover {
+  color: var(--background);
+}
+.Ripple-button:hover::before {
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform-origin: bottom left;
+}

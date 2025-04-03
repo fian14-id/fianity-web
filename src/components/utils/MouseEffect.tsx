@@ -9,7 +9,6 @@ export default function MouseEffect() {
     smoothMouse, 
     isHovering, 
     isMousePresent, 
-    isMouseMoving,
     isMobile 
   } = useMouseContext();
 

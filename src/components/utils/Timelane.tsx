@@ -29,11 +29,11 @@ const Clock: React.FC<ClockProps> = ({className= ""}) => {
   }
 
   // Format tanggal menjadi "March 14, 2025"
-  const formattedDate = currentTime.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: '2-digit',
-  });
+  // const formattedDate = currentTime.toLocaleDateString('en-US', {
+  //   year: 'numeric',
+  //   month: 'long',
+  //   day: '2-digit',
+  // });
 
   // Format waktu (misalnya: "12:34:56")
   const formattedTime = currentTime.toLocaleTimeString('en-US');

@@ -2,7 +2,6 @@
 import { ArrowDown } from "lucide-react";
 import { useMouseInteraction } from "@/app/hook/useMouseInteractions";
 import RippleButton from "@/components/utils/Button";
-import Link from "next/link";
 import ModelViewer from "./utils/ModelViewer";
 
 const HeroSection = () => {

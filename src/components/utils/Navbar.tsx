@@ -8,25 +8,6 @@ import { usePathname } from "next/navigation";
 import RippleButton from "./Button";
 import { useMouseInteraction } from "@/app/hook/useMouseInteractions";
 
-const menuLinks = [
-  {
-    path: "/",
-    label: "home",
-  },
-  {
-    path: "/",
-    label: "work",
-  },
-  {
-    path: "/",
-    label: "services",
-  },
-  {
-    path: "/",
-    label: "contact",
-  },
-]
-
 const Navbar = () => {
   const container = useRef<HTMLElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);

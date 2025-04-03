@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+// import type { NextRequest } from 'next/server';
 
-export function middleware(request: NextRequest) {
+export function middleware() {
   // Ini hanya untuk mencatat perubahan rute, 
   // loading sebenarnya dikelola di client-side
   return NextResponse.next();

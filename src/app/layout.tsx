@@ -6,7 +6,6 @@ import { MouseProvider } from "@/providers/MouseContext";
 import Footer from "@/components/utils/Footer";
 import BackgroundTexture from "@/providers/BackgroundTexture";
 import CloseSection from "@/components/CloseSection";
-import LoadingScreen from "@/components/utils/LoadingScreen";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -31,7 +30,6 @@ export default function RootLayout({
             </BackgroundTexture>
             <MouseEffect />
             <CloseSection />
-            <LoadingScreen />
         </MouseProvider>
       </body>
     </html>

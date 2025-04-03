@@ -1,6 +1,5 @@
 import { Canvas } from "@react-three/fiber";
 import { useGLTF, Stage, PresentationControls } from "@react-three/drei";
-import { Attributes } from "react";
 
 const Model = ({...props}) => {
     const { scene } = useGLTF("/images/bocchi.glb");

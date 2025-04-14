@@ -1,5 +1,4 @@
 "use client";
-import { use } from "react";
 import { useMouseInteraction } from "@/app/hook/useMouseInteractions";
 import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";

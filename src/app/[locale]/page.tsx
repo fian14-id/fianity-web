@@ -3,15 +3,7 @@ import HeroSection from "@/components/HomeSection";
 import AboutMe from "@/components/AboutMe";
 import TableTexture from "@/components/utils/TableTexture";
 import WorkProject from "@/components/WorkProject";
-
-const personalInformation = {
-  title: "Mochamad Allifian Ar'Rasyid",
-  description: "personal website from allifian as web developer.",
-  keyword: "mochamad allifian arrasyid, allifian arrasyid, allifian, fianity, web developer, frontend developer",
-  url: `https://fianity.com`,
-  siteName: "Allifian",
-  imageUrl: "/images/maa.png",
-}
+import { personal as personalInformation } from "@/libs/personal-info";
 
 export const metadata: Metadata = {
     title: personalInformation.title,
@@ -39,7 +31,8 @@ export const metadata: Metadata = {
       images: [personalInformation.imageUrl],
     },
   };
-export default function Home() {
+export default async function Home({params}: {params: Promise<{locale: string}>}) {
+  const { locale } = await params;
   return (
     <>
     
@@ -47,7 +40,7 @@ export default function Home() {
       <TableTexture />
       <HeroSection />
       <AboutMe />
-      <WorkProject />
+      <WorkProject params={locale} />
     </div>
     </>
   );

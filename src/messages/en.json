@@ -1,0 +1,34 @@
+{
+    "homeSection": {
+        "title": "Allifian",
+        "description": "Hi, I'm Allifian — Cash Processing Center professional for 1,8 years. I have experience in managing and processing financial transactions with high accuracy.",
+        "button": "Explore",
+        "endGreeting": "Let's Talk To Me",
+        "endGreetingToHome": "Back to Home"
+    },
+    "aboutSection": {
+        "title": "About Me",
+        "description": "CPC professional with 1,8 years of experience in cash handling operations (counting, sorting, packing money) and ATM validation.\n\nTrack record of improving operational efficiency through technical solutions such as in-house barcode application development.\n\nCommitted to contributing to the Java region with high integrity and rigor.",
+        "button": "More About Me",
+        "businessDescription": "Software Engineering graduate with a focus on frontend development and graphic design.\n\nIntegrate aesthetics and strategy to create memorable and long-lasting branding.\n\nActive in blogging, graphic design, and developing IoT-based technologies."
+    },
+    "workProject": {
+        "title": "Portofolio",
+        "description": "This is my projects that I have worked on.",
+        "button": "Learn More",
+        "project-1":
+            {
+                "title": "Barcode Realtime",
+                "description": "This application was designed to resolve the issue of barcodes becoming damaged or losing some of their lines, which prevents them from being scanned correctly. Barcodes play a crucial role in helping my team work more efficiently. With functional barcodes, we can input data much faster.",
+                "url": "https://barcode.fianity.com",
+                "learn-more": "/work/barcode-realtime"
+            },
+            "project-2":
+            {
+                "title": "Nexanime",
+                "description": "This is an anime information website similar to MyAnimeList, but built with Next.js to provide a modern and fast user experience.",
+                "url": "https://nexanime.fianity.com",
+                "learn-more": "/work/nexanime"
+            }
+    }
+}

@@ -1,12 +1,7 @@
-import { NextResponse } from 'next/server';
-// import type { NextRequest } from 'next/server';
+import createMiddleware from 'next-intl/middleware';
+import { routing } from './i18n/routing';
 
-export function middleware() {
-  // Ini hanya untuk mencatat perubahan rute, 
-  // loading sebenarnya dikelola di client-side
-  return NextResponse.next();
-}
-
+export default createMiddleware(routing)
 export const config = {
   matcher: [
     /*
@@ -16,6 +11,6 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      */
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+    '/((?!api|_next|trpc|_vercel|_next/static|_next/image|favicon.ico|.*\\..*).*)',
   ],
 };

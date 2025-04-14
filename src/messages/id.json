@@ -1,0 +1,32 @@
+{
+  "homeSection": {
+    "title": "Allifian",
+    "description": "Halo, Saya Allifian — Profesional Cash Processing Center selama 1,8 tahun. Saya memiliki pengalaman dalam mengelola dan memproses transaksi keuangan dengan akurasi tinggi.",
+    "button": "Jelajahi",
+    "endGreeting": "Ingin ngobrol?",
+    "endGreetingToHome": "Beranda"
+  },
+  "aboutSection": {
+    "title": "Tentang Saya",
+    "description": "Profesional CPC dengan 1,8 tahun pengalaman di operasional cash handling (penghitungan, sortasi, pengemasan uang) dan validasi ATM.\n\nMemiliki rekam jejak dalam meningkatkan efisiensi operasional melalui solusi teknis seperti pengembangan aplikasi barcode internal.\n\nBerkomitmen untuk berkontribusi di wilayah Jawa dengan integritas dan ketelitian tinggi.",
+    "button": "Lebih lanjut tentang aku",
+    "businessDescription": "Lulusan Rekayasa Perangkat Lunak dengan fokus pada frontend development dan graphic design.\n\nMengintegrasikan estetika dan strategi untuk menciptakan branding yang berkesan dan bertahan lama.\n\nAktif membuat blog, mendesain grafis, dan mengembangkan teknologi berbasis IoT."
+  },
+  "workProject": {
+    "title": "Portofolio",
+    "description": "Berikut adalah beberapa proyek yang telah saya kerjakan.",
+    "button": "Pelajari selengkapnya",
+    "project-1": {
+      "title": "Barcode Realtime",
+      "description": "Aplikasi ini dirancang untuk mengatasi masalah barcode yang rusak atau kehilangan beberapa barisnya, yang mencegahnya dipindai dengan benar. Barcode memainkan peran penting dalam membantu tim saya bekerja lebih efisien. Dengan barcode yang fungsional, kami bisa memasukkan data dengan lebih cepat.",
+      "url": "https://barcode.fianity.com",
+      "learn-more": "/work/barcode-realtime"
+    },
+    "project-2": {
+      "title": "Nexanime",
+      "description": "Ini adalah situs web informasi anime yang mirip dengan MyAnimeList, tetapi dibuat dengan Next.js untuk memberikan pengalaman pengguna yang modern dan cepat.",
+      "url": "https://nexanime.fianity.com",
+      "learn-more": "/work/nexanime"
+    }
+  }
+}

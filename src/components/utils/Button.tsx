@@ -5,6 +5,7 @@ import React, { FC, ReactNode } from 'react';
 interface RippleButtonProps {
   children: ReactNode;
   className?: string;
+  id?: string;
   borderDefault?: boolean;
   title?: string;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
@@ -15,6 +16,7 @@ interface RippleButtonProps {
 const RippleButton: FC<RippleButtonProps> = ({
   children,
   className = '',
+  id = '',
   borderDefault = true,
   title = '',
   onClick,
@@ -29,6 +31,7 @@ const RippleButton: FC<RippleButtonProps> = ({
     <button
       title={title}
       type={type}
+      id={id}
       onClick={onClick}
       disabled={disabled}
       className={`Ripple-button ${borderDefault ? "border-foreground" : ""} ease-in-out duration-300 rounded-full font-medium uppercase ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}

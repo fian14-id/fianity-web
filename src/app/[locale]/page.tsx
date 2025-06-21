@@ -5,7 +5,9 @@ import TableTexture from "@/components/utils/TableTexture";
 import WorkProject from "@/components/WorkProject";
 import { personal as personalInformation } from "@/libs/personal-info";
 
+
 export const metadata: Metadata = {
+    metadataBase: new URL(personalInformation.url),
     title: personalInformation.title,
     description: personalInformation.description,
     keywords: personalInformation.keyword,
@@ -39,8 +41,8 @@ export default async function Home({params}: {params: Promise<{locale: string}>}
     <div className="relative overflow-hidden border-x-1 border-foreground/10">
       <TableTexture />
       <HeroSection />
-      <AboutMe />
       <WorkProject params={locale} />
+      <AboutMe />
     </div>
     </>
   );

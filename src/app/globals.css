@@ -129,20 +129,25 @@ body {
 
 .overlay {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: 2;
+  width: 100dvw;
+  height: 100dvh;
+  z-index: 35;
   display: flex;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
 
 .bar {
   width: 10vw;
   height: 105vh;
-  background: var(--foreground);
+  background: var(--accent);
 }
 
 .counter {
   position: fixed;
+  /* top: 0; */
+  left: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -154,6 +159,7 @@ body {
   font-size: 20vw;
   font-family: 'Freedom', sans-serif;
 }
+
 
 .menu-overlay {
   clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);

@@ -16,7 +16,7 @@ const BarcodeComponent = () => {
           <span className="col-span-1"></span> */}
           <div className="col-span-2 flex flex-col justify-end items-center">
             <code className="bg-foreground/10 px-2 py-0.5 w-fit rounded mb-2">preview</code>
-            <Image src="/images/barcode.png" alt="barcode image" width={1600} height={900} className="w-full object-cover aspect-[16/9] object-center" />
+            <Image src="/images/barcode.png" alt="barcode image" width={1600} height={900} className="w-full object-cover aspect-[16/9] object-center" loading="lazy" />
           </div>
         </main>
   )

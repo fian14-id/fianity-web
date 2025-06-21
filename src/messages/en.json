@@ -1,19 +1,19 @@
 {
     "homeSection": {
         "title": "Allifian",
-        "description": "Hi, I'm Allifian — Cash Processing Center professional for 1,8 years. I have experience in managing and processing financial transactions with high accuracy.",
+        "description": "Hi, I'm Allifian — A proactive problem solver with proven web development skills, now passionate about building a career and providing solutions in the IT Support field.",
         "button": "Explore",
         "endGreeting": "Let's Talk To Me",
         "endGreetingToHome": "Back to Home"
     },
     "aboutSection": {
-        "title": "About Me",
+        "title": "Who i am?",
         "description": "CPC professional with 1,8 years of experience in cash handling operations (counting, sorting, packing money) and ATM validation.\n\nTrack record of improving operational efficiency through technical solutions such as in-house barcode application development.\n\nCommitted to contributing to the Java region with high integrity and rigor.",
         "button": "More About Me",
         "businessDescription": "Software Engineering graduate with a focus on frontend development and graphic design.\n\nIntegrate aesthetics and strategy to create memorable and long-lasting branding.\n\nActive in blogging, graphic design, and developing IoT-based technologies."
     },
     "workProject": {
-        "title": "Portofolio",
+        "title": "What i do?",
         "description": "This is my projects that I have worked on.",
         "button": "Learn More",
         "project-1":

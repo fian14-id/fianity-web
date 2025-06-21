@@ -1,19 +1,19 @@
 {
   "homeSection": {
     "title": "Allifian",
-    "description": "Halo, Saya Allifian — Profesional Cash Processing Center selama 1,8 tahun. Saya memiliki pengalaman dalam mengelola dan memproses transaksi keuangan dengan akurasi tinggi.",
+    "description": "Halo, Saya Allifian — Seorang problem solver proaktif dengan keahlian pengembangan web yang terbukti, kini bersemangat untuk membangun karir dan memberikan solusi di bidang IT Support.",
     "button": "Jelajahi",
     "endGreeting": "Ingin ngobrol?",
-    "endGreetingToHome": "Beranda"
+    "endGreetingToHome": "Halaman Utama"
   },
   "aboutSection": {
-    "title": "Tentang Saya",
-    "description": "Profesional CPC dengan 1,8 tahun pengalaman di operasional cash handling (penghitungan, sortasi, pengemasan uang) dan validasi ATM.\n\nMemiliki rekam jejak dalam meningkatkan efisiensi operasional melalui solusi teknis seperti pengembangan aplikasi barcode internal.\n\nBerkomitmen untuk berkontribusi di wilayah Jawa dengan integritas dan ketelitian tinggi.",
+    "title": "Siapa aku?",
+    "description": "Saya lulusan rekayasa perangkat lunak dan saya memiliki ketertarikan dengan hal yang berhubungan kreatifitas.\n\nSaya memiliki pengalaman sebagai cash processing center dengan catatan bekerja yang baik.\n\nSaya memiliki karakteristik kemandirian, pemecah masalah, dan komunikator yang jujur.",
     "button": "Lebih lanjut tentang aku",
     "businessDescription": "Lulusan Rekayasa Perangkat Lunak dengan fokus pada frontend development dan graphic design.\n\nMengintegrasikan estetika dan strategi untuk menciptakan branding yang berkesan dan bertahan lama.\n\nAktif membuat blog, mendesain grafis, dan mengembangkan teknologi berbasis IoT."
   },
   "workProject": {
-    "title": "Portofolio",
+    "title": "Apa yang aku lakukan?",
     "description": "Berikut adalah beberapa proyek yang telah saya kerjakan.",
     "button": "Pelajari selengkapnya",
     "project-1": {

@@ -1,3 +1,4 @@
+
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
@@ -8,12 +9,11 @@ import Navbar from "@/components/utils/Navbar";
 import MouseEffect from "@/components/utils/MouseEffect";
 import { MouseProvider } from "@/providers/MouseContext";
 import Footer from "@/components/utils/Footer";
-import BackgroundTexture from "@/providers/BackgroundTexture";
 import CloseSection from "@/components/CloseSection";
 import { setRequestLocale } from "next-intl/server";
- 
+
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({locale}));
+  return routing.locales.map((locale) => ({ locale }));
 }
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -35,21 +35,23 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
+
   return (
     <html lang={locale}>
       <body
         className={`${montserrat.variable} antialiased md:subpixel-antialiased relative`}
       >
         <NextIntlClientProvider>
-        <MouseProvider>
-          <Navbar />
-          <BackgroundTexture>
-            {children}
-            <Footer />
-          </BackgroundTexture>
-          <MouseEffect />
-          <CloseSection params={locale} />
-        </MouseProvider>
+          <MouseProvider>
+            <Navbar />
+            {/* <LoadingScreen /> */}
+              {/* <PageTransition> */}
+              {children}
+              <Footer params={locale} />
+              {/* </PageTransition> */}
+            <MouseEffect />
+            <CloseSection params={locale} />
+          </MouseProvider>
         </NextIntlClientProvider>
       </body>
     </html>

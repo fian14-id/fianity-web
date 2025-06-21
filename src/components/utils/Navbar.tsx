@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { usePathname } from "next/navigation";
 import RippleButton from "./Button";
 import { useMouseInteraction } from "@/app/hook/useMouseInteractions";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const container = useRef<HTMLElement>(null);
@@ -56,16 +57,18 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full sticky z-30 top-0 backdrop-blur-xs border-b-1 bg-transparent border-b-foreground/10" ref={container}>
+    <motion.header initial={{ y: -50 }} animate={{ y: 0 }} transition={{ ease: "easeIn", duration: 0.5 }} className="w-full sticky z-30 top-0 backdrop-blur-xs border-b-1 bg-transparent border-b-foreground/10" ref={container}>
       <nav className="mx-auto max-w-[90rem] px-6 flex items-center justify-between py-4">
         <Link href="/">
-          <h1 {...mouseProps} className="text-foreground font-medium uppercase relative tracking-wide text-sm md:text-lg">
+          <h1 {...mouseProps} id="logo" className="font-medium uppercase relative tracking-wide text-sm md:text-lg">
             Allifian
           </h1>
         </Link>
         <RippleButton
           title="open menu"
+          id="menu"
           className="px-2 py-0.5 md:px-3 md:py-1 border-1 text-xs md:text-sm"
+          borderDefault={false}
           onClick={toggleMenu}
         >
           Menu
@@ -91,9 +94,17 @@ const Navbar = () => {
             </RippleButton>
           </div>
         </div>
-        <main className="menu-copy flex flex-col items-end px-6 w-full mx-auto max-w-[90rem]">
+        <nav className="menu-copy flex flex-col items-end px-6 w-full mx-auto max-w-[90rem]">
           <div className="menu-link flex flex-col group items-end gap-4 md:gap-6">
               
+                <ul className="menu-link-item">
+                <li className="menu-link-item-holder" onClick={toggleMenu}>
+                  <Link href="/about" className={`menu-link ${pathname === "/work" ? "opacity-25 cursor-not-allowed" : null} uppercase text-4xl md:text-7xl font-regular transition-all duration-300 underline-animation this-animation`} {...mouseProps}>
+                    About
+                  </Link>
+                </li>
+              </ul>
+
                 <ul className="menu-link-item">
                 <li className="menu-link-item-holder" onClick={toggleMenu}>
                   <Link href="/work" className={`menu-link ${pathname === "/work" ? "opacity-25 cursor-not-allowed" : null} uppercase text-4xl md:text-7xl font-regular transition-all duration-300 underline-animation this-animation`} {...mouseProps}>
@@ -103,13 +114,13 @@ const Navbar = () => {
               </ul>
               
               
-                <ul className="menu-link-item">
+                {/* <ul className="menu-link-item">
                 <li className="menu-link-item-holder" onClick={toggleMenu}>
                   <Link href="/services" className={`menu-link ${pathname === "/services" ? "opacity-25 cursor-not-allowed" : null} uppercase text-4xl md:text-7xl font-regular transition-all duration-300 underline-animation this-animation`} {...mouseProps}>
                     Services
                   </Link>
                 </li>
-              </ul>
+              </ul> */}
               
               
                 <ul className="menu-link-item">
@@ -130,7 +141,7 @@ const Navbar = () => {
               </ul>
               
           </div>
-        </main>
+        </nav>
         <main className="menu-info flex justify-between gap-4 md:gap-8 px-6 mx-auto w-full  max-w-[90rem]">
           <div className="menu-info-col flex flex-col md:flex-row gap-0 md:gap-6 items-start md:items-end">
             <Link target="_blank" href="https://www.linkedin.com/in/allifian/" className="flex items-center flex-wrap underline-animation this-animation" {...mouseProps}>
@@ -144,13 +155,13 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="menu-info-col flex flex-col justify-end md:justify-center items-end">
-            <a href="mailto:dev@fianity.com" className="font-medium uppercase text-xs md:text-sm" {...mouseProps}>
-              dev@fianity.com
+            <a href="mailto:allifianarrasyid@gmail.com" className="font-medium uppercase text-xs md:text-sm" {...mouseProps}>
+              allifianarrasyid@gmail.com
             </a>
           </div>
         </main>
       </section>
-    </header>
+    </motion.header>
   );
 };
 
